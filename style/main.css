@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100vh;
+    background: #28282B;
+    color: black;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+
+.wrapper {
+   background-color: white;
+   width: 600px;
+   height: 250px;
+   padding-right: 30px;
+   border-radius: 25px;
+   box-shadow: 0 .8rem 2.5rem rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: black;
+}
+
+.wrapper.active {
+    height: 300px;
+    padding-right: 50px;
+}
+
+.wrapper.active .header h1 {
+    font-size: 2.5rem;
+}
+
+.header-form {
+    padding-left: 50px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.wrapper .header p {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.wrapper .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    border: none;
+    border-bottom: .1rem solid #ccc;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.wrapper .form input::placeholder {
+   padding-left: .5rem;
+    color: #000;
+}
+
+.wrapper .form button {
+    width: 100%;
+    height: 40px;
+    background-color: #28282B;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.wrapper .form button:hover {
+    background-color: #4F4F4F;
+}
+
+.wrapper .qr-code {
+    display: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    border: 1px solid #ccc
+}
+
+.wrapper .qr-code img {
+    width: 170px;
+}
+
+.wrapper.active .qr-code{
+    display: block;
+    transition: all .5s .5s ease;
+}
